@@ -5,6 +5,12 @@ angular.module('myApp')
             // route for the home page
             .when('/', {
                 templateUrl : 'partials/ProjectList.html',
+                controller  : 'ProjectListCtrl'
+            })
+
+            // route for the project specific pages
+            .when('/project/:id', {
+                templateUrl : 'partials/Project.html',
                 controller  : 'ProjectCtrl'
             })
 
