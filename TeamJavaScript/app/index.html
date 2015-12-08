@@ -1,9 +1,6 @@
 <html>
 <head>
-
 <link rel="stylesheet" href="../css/bootstrap.css"></link>
-
-
 <script type="text/javascript" src="angular.js"></script>
 <script type="text/javascript" src="angular-cookies.js"></script>
 <script type="text/javascript" src="angular-route.js"></script>
@@ -13,7 +10,7 @@
 <base href="http://localhost:8000/app/" />
 
 <div class="container" ng-controller="MyCtrl">
-	{{client.client_id}}
+	<p>Client Id is: {{client.client_id}}</p>
 
 	<h1>Projects</h1>
 	<div ng-show="projects.length">
