@@ -7,9 +7,22 @@
 <body>
   <div class="container" ng-controller="TopicCtrl">
     <p class="lead">{{topic.title}}</p>
-
-    ...
-
+    <p ng-show="topic.creation_author">Author: {{topic.creation_author}}</p>
+    <p ng-show="topic.description">Description: {{topic.description}}</p>
+    <p ng-show="topic.topic_type">Type: {{topic.topic_type}}</p>
+    <p ng-show="topic.topic_status">Status: {{topic.topic_status}}</p>
+    <p ng-show="topic.priority">Priority: {{topic.priority}}</p>
+    <p ng-show="topic.assigned_to">Assigned to: {{topic.assigned_to}}</p>
+    <p ng-show="topic.labels.length">Labels:
+      <span ng-repeat="label in topic.labels">{{label}}</span>
+    </p>
+    <p ng-show="topic.bim_snippet">
+      BIM snippet:<br>
+      Type: {{topic.bim_snippet.snippet_type}}<br>
+      {{topic.bim_snippet.is_external ? 'External' : 'Local'}}<br>
+      Reference: {{topic.bim_snippet.reference}}<br>
+      Schema: {{topic.bim_snippet.reference_schema}}
+    </p>
     <p ng-show=error>
       {{error}}
     </p>
