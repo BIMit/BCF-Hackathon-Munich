@@ -5,6 +5,14 @@
     <title></title>
 </head>
 <body>
+  <div class="container" ng-controller="TopicCtrl">
+    <p class="lead">{{topic.title}}</p>
 
+    ...
+
+    <p ng-show=error>
+      {{error}}
+    </p>
+  </div>
 </body>
 </html>

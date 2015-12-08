@@ -13,7 +13,7 @@
             <li><a href="/app/project/{{project.project_id}}">{{project.name}}</a></li>
         </ul>
     </div>
-    <div ng-show="!projects.length">
+    <div ng-hide="projects.length">
         <p class="lead">
             No projects to display.
         </p>

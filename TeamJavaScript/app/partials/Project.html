@@ -6,14 +6,20 @@
 </head>
 <body>
 <div class="container" ng-controller="ProjectCtrl">
-
     <p class="lead">Topics</p>
+    <div ng-show="topics.length">
       <ul ng-repeat="topic in topics">
         <li><a href="/app/project/{{project.project_id}}/topic/{{topic.guid}}">{{topic.title}}</a></li>
       </ul>
-      <p ng-show=error>
-          {{error}}
+    </div>
+    <div ng-hide="topics.length">
+      <p class="lead">
+        No Topics to display.
       </p>
+    </div>
+    <p ng-show=error>
+      {{error}}
+    </p>
 </div>
 </body>
 </html>
