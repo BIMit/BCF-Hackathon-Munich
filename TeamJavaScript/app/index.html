@@ -9,20 +9,7 @@
 <body ng-app="myApp">
 <base href="http://localhost:8000/app/" />
 
-<div class="container" ng-controller="MyCtrl">
-	<p>Client Id is: {{client.client_id}}</p>
+	<div ng-view></div>
 
-	<h1>Projects</h1>
-	<div ng-show="projects.length">
-		<ul ng-repeat="project in projects">
-		<li>{{project.name}}</li>
-	</ul>
-	</div>
-	<div ng-show="!projects.length">
-		<p class="lead">
-			No projects to display.
-		</p>
-	</div>
-</div>
 </body>
 </html>
