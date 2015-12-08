@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript" src="angular-cookies.js"></script>
+<script type="text/javascript" src="angular-route.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="myApp">
+<base href="http://localhost:8000/app/" />
+
+<div ng-controller="MyCtrl">
+	{{client.client_id}}
+	
+	<h1>Projects</h1>
+	<div ng-repeat="project in projects">
+		<p>
+			{{project.name}}
+		</p>
+	</div>
+</div>
+</body>
+</html>
