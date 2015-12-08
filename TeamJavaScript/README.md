@@ -7,6 +7,7 @@ The easiest way is to install [node.js](https://nodejs.org/), and then:
 ```
 git clone https://github.com/BIMit/BCF-Hackathon-Munich.git
 cd BCF-Hackathon-Munich/TeamJavaScript
+npm install bower
 npm start
 ```
 
