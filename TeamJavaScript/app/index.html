@@ -1,14 +1,24 @@
 <html>
 <head>
 <link rel="stylesheet" href="../css/bootstrap.css"></link>
-<script type="text/javascript" src="angular.js"></script>
-<script type="text/javascript" src="angular-cookies.js"></script>
-<script type="text/javascript" src="angular-route.js"></script>
-<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="angular-cookies.js"></script>
+	<script type="text/javascript" src="angular-route.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="routes.js"></script>
+	<script type="text/javascript" src="controllers/MainCtrl.js"></script>
+	<script type="text/javascript" src="controllers/ProjectCtrl.js"></script>
+	<script type="text/javascript" src="controllers/TopicCtrl.js"></script>
+	<script type="text/javascript" src="controllers/CommentCtrl.js"></script>
+	<script type="text/javascript" src="controllers/ViewpointCtrl.js"></script>
+	<script type="text/javascript" src="controllers/ExtensionDetailCtrl.js"></script>
 </head>
 <body ng-app="myApp">
 <base href="http://localhost:8000/app/" />
-
+	<div ng-controller="MainCtrl">
+		<input type="text" ng-model="BaseUrl">
+		<button ng-click="connectToServer()">Connect</button>
+	</div>
 	<div ng-view></div>
 
 </body>
