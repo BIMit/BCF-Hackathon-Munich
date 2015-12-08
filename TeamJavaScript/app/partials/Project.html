@@ -6,6 +6,12 @@
 </head>
 <body>
 <div class="container" ng-controller="ProjectCtrl">
+
+  <ol class="breadcrumb">
+    <li><a href="/app">Home</a></li>
+    <li class="active"><a href="/app/project/{{project.project_id}}">{{project.project_id}}</a></li>
+  </ol>
+
     <p class="lead">Topics</p>
     <div ng-show="topics.length">
       <ul ng-repeat="topic in topics">

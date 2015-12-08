@@ -5,6 +5,14 @@ angular.module('myApp')
 
         $http.defaults.headers.common.Authorization = 'Bearer ' + $cookies.getObject('token').access_token;
 
+        $http.get(BaseUrl + '/bcf/1.0/projects/' + $routeParams.project_id)
+        .success(function(data) {
+            $scope.project = data;
+        })
+        .error(function(data) {
+            $scope.error = data;
+        });
+
         $http.get(BaseUrl + '/bcf/1.0/projects/' + $routeParams.project_id + '/topics')
         .success(function(data) {
             $scope.topics = data;

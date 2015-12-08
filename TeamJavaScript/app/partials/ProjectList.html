@@ -7,6 +7,10 @@
 <body>
 <div class="container" ng-controller="ProjectListCtrl">
 
+  <ol class="breadcrumb">
+    <li class="active"><a href="/app">Home</a></li>
+  </ol>
+
     <h1>Projects</h1>
     <div ng-show="projects.length">
         <ul ng-repeat="project in projects">

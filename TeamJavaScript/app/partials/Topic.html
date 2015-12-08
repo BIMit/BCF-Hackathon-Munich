@@ -6,6 +6,12 @@
 </head>
 <body>
   <div class="container" ng-controller="TopicCtrl">
+    <ol class="breadcrumb">
+      <li><a href="/app">Home</a></li>
+      <li><a href="/app/project/{{project.project_id}}">{{project.project_id}}</a></li>
+      <li class="active"><a href="/app/project/{{project.project_id}}/topics/{{topic.topic_id}}">{{topic.topic_id}}</a></li>
+    </ol>
+
     <p class="lead">{{topic.title}}</p>
     <p ng-show="topic.creation_author">Author: {{topic.creation_author}}</p>
     <p ng-show="topic.description">Description: {{topic.description}}</p>
