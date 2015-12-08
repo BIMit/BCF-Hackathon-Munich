@@ -6,7 +6,28 @@
  .config(function($locationProvider) {
 	 $locationProvider.html5Mode(true);	 
 	})
-	.controller('MyCtrl', function($scope, $http, $cookies, $routeParams, $location ) {
+	 .config(function($routeProvider) {
+		 $routeProvider
+
+			 // route for the home page
+			 .when('/', {
+				 templateUrl : 'partials/ProjectList.html',
+				 controller  : 'ProjectCtrl'
+			 })
+
+			 // route for the about page
+			 .when('/topics', {
+				 templateUrl : 'partials/TopicList.html',
+				 controller  : 'TopicCtrl'
+			 })
+
+			 // route for the contact page
+			 .when('/comments', {
+				 templateUrl : 'partials/CommentList.html',
+				 controller  : 'CommentCtrl'
+			 });
+	 })
+	.controller('ProjectCtrl', function($scope, $http, $cookies, $routeParams, $location ) {
 		//$http.defaults.headers.post["Content-Type"] = "text/plain";
 		
 		var baseUrl = 'http://bim--it-dev.iabi.biz';

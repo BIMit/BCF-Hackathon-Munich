@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="ProjectCtrl">
+    {{client.client_id}}
+
+    <h1>Projects</h1>
+    <div ng-repeat="project in projects">
+        <p>
+            {{project.name}}
+        </p>
+    </div>
+</div>
+</body>
+</html>
