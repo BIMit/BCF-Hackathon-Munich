@@ -1,5 +1,9 @@
 <html>
 <head>
+
+<link rel="stylesheet" href="../css/bootstrap.css"></link>
+
+
 <script type="text/javascript" src="angular.js"></script>
 <script type="text/javascript" src="angular-cookies.js"></script>
 <script type="text/javascript" src="angular-route.js"></script>
@@ -8,13 +12,18 @@
 <body ng-app="myApp">
 <base href="http://localhost:8000/app/" />
 
-<div ng-controller="MyCtrl">
+<div class="container" ng-controller="MyCtrl">
 	{{client.client_id}}
-	
+
 	<h1>Projects</h1>
-	<div ng-repeat="project in projects">
-		<p>
-			{{project.name}}
+	<div ng-show="projects.length">
+		<ul ng-repeat="project in projects">
+		<li>{{project.name}}</li>
+	</ul>
+	</div>
+	<div ng-show="!projects.length">
+		<p class="lead">
+			No projects to display.
 		</p>
 	</div>
 </div>
