@@ -4,13 +4,13 @@
 
 Proposed teams:
 - JavaScript
-  Milosc, Georg, Jon, Anderson
+  - Milosc, Georg, Jon, Anderson
 
 - Java
-  Yoram, Pasi, Anders, Rahul
+  - Yoram, Pasi, Anders, Rahul
 
 - C#
-  Eduard, Thomas, Andreas, Eberhard, Pietr
+  - Eduard, Thomas, Andreas, Eberhard, Pietr
 
 - Xamarin
-  Veni
+  - Veni
