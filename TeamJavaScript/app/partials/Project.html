@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container" ng-controller="ProjectCtrl">
+
+  <ol class="breadcrumb">
+    <li><a href="/app">Home</a></li>
+    <li class="active"><a href="/app/project/{{project.project_id}}">{{project.project_id}}</a></li>
+  </ol>
+
+    <p class="lead">Topics</p>
+    <div ng-show="topics.length">
+      <ul ng-repeat="topic in topics">
+        <li><a href="/app/project/{{project.project_id}}/topic/{{topic.guid}}">{{topic.title}}</a></li>
+      </ul>
+    </div>
+    <div ng-hide="topics.length">
+      <p class="lead">
+        No Topics to display.
+      </p>
+    </div>
+    <p ng-show=error>
+      {{error}}
+    </p>
+</div>
+</body>
+</html>

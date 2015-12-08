@@ -1,3 +1,20 @@
+# Team JavaScript
+
+## Run the project
+
+The easiest way is to install [node.js](https://nodejs.org/), and then:
+
+```
+git clone https://github.com/BIMit/BCF-Hackathon-Munich.git
+cd BCF-Hackathon-Munich/TeamJavaScript
+npm install bower
+npm start
+```
+
+Then access the local server (probably at http://localhost:8000).
+
+
+# -- review what's below --
 # angular-seed — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.

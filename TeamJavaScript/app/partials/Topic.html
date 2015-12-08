@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <div class="container" ng-controller="TopicCtrl">
+    <ol class="breadcrumb">
+      <li><a href="/app">Home</a></li>
+      <li><a href="/app/project/{{project.project_id}}">{{project.project_id}}</a></li>
+      <li class="active"><a href="/app/project/{{project.project_id}}/topics/{{topic.topic_id}}">{{topic.topic_id}}</a></li>
+    </ol>
+
+    <p class="lead">{{topic.title}}</p>
+    <p ng-show="topic.creation_author">Author: {{topic.creation_author}}</p>
+    <p ng-show="topic.description">Description: {{topic.description}}</p>
+    <p ng-show="topic.topic_type">Type: {{topic.topic_type}}</p>
+    <p ng-show="topic.topic_status">Status: {{topic.topic_status}}</p>
+    <p ng-show="topic.priority">Priority: {{topic.priority}}</p>
+    <p ng-show="topic.assigned_to">Assigned to: {{topic.assigned_to}}</p>
+    <p ng-show="topic.labels.length">Labels:
+      <span ng-repeat="label in topic.labels">{{label}}</span>
+    </p>
+    <p ng-show="topic.bim_snippet">
+      BIM snippet:<br>
+      Type: {{topic.bim_snippet.snippet_type}}<br>
+      {{topic.bim_snippet.is_external ? 'External' : 'Local'}}<br>
+      Reference: <a href="{{topic.bim_snippet.reference}}">{{topic.bim_snippet.reference}}</a><br>
+      Schema: <a href="{{topic.bim_snippet.reference_schema}}">{{topic.bim_snippet.reference_schema}}</a>
+    </p>
+    <p ng-show=error>
+      {{error}}
+    </p>
+  </div>
+</body>
+</html>

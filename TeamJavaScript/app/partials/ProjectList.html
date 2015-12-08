@@ -5,15 +5,19 @@
     <title></title>
 </head>
 <body>
-<div class="container" ng-controller="ProjectCtrl">
+<div class="container" ng-controller="ProjectListCtrl">
+
+  <ol class="breadcrumb">
+    <li class="active"><a href="/app">Home</a></li>
+  </ol>
 
     <h1>Projects</h1>
     <div ng-show="projects.length">
         <ul ng-repeat="project in projects">
-            <li>{{project.name}}</li>
+            <li><a href="/app/project/{{project.project_id}}">{{project.name}}</a></li>
         </ul>
     </div>
-    <div ng-show="!projects.length">
+    <div ng-hide="projects.length">
         <p class="lead">
             No projects to display.
         </p>
