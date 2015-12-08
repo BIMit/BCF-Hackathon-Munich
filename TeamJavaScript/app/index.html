@@ -8,7 +8,15 @@
 <body ng-app="myApp">
 <base href="http://localhost:8000/app/" />
 
-<div ng-view></div>
-
+<div ng-controller="MyCtrl">
+	{{client.client_id}}
+	
+	<h1>Projects</h1>
+	<div ng-repeat="project in projects">
+		<p>
+			{{project.name}}
+		</p>
+	</div>
+</div>
 </body>
 </html>
