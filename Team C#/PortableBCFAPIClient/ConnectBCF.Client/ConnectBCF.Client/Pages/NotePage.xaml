@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConnectBCF.Client.Pages.NotePage">
+  <StackLayout>
+    <Label Text="Here would be topic properties"/>
+    <Label Text="Comments"/>
+    <ListView ItemsSource="{Binding Comments}" SelectedItem="{Binding SelectedComment, Mode=TwoWay}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Text}" Detail="{Binding Status}" DetailColor="Gray"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    <Label Text="New Comment"/>
+    <Entry Text="{Binding CommentText}"/>
+    <Label Text="New Status"/>
+    <Entry Text="{Binding StatusText}"/>
+    <Button Text="Add" Command="{Binding AddCommentCommand}"/>
+  </StackLayout>
+</ContentPage>
