@@ -18,6 +18,9 @@
 	<div ng-controller="MainCtrl">
 		<input type="text" ng-model="BaseUrl">
 		<button ng-click="connectToServer()">Connect</button>
+		<p><b>Token:</b> <span ng-bind="token"></span></p>
+		<p><b>Refresh Token:</b> <span ng-bind="refresh_token"></span></p>
+		<button ng-click="refreshToken()">Refresh</button>
 	</div>
 	<div ng-view></div>
 
