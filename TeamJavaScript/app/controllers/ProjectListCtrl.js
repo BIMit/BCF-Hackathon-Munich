@@ -1,8 +1,10 @@
 angular.module('myApp')
     .controller('ProjectListCtrl', function($scope, $http, $cookies, $routeParams, $location, BaseUrl) {
 
-    //var baseUrl = 'http://bim--it-dev.iabi.biz';
 
+
+    //var baseUrl = 'http://bim--it-dev.iabi.biz';
+    return;
     if ($location.search().code) {
         // Exchange code for token
         var client = $cookies.getObject("client");
